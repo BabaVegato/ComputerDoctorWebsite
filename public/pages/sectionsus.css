@@ -1,0 +1,173 @@
+body h2{
+    text-align: center;
+    font-size: 50px;
+}
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+section{
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+section h2{
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+section h2:first-of-type{
+    animation: showup 7s infinite;
+}
+section h2:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+}
+section h2:last-of-type span {
+    margin-left:-500px;
+    animation: slidein 7s infinite;
+}
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+
+
+.story p{
+    color: rgb(92, 92, 92);
+    font: 12px/1.5 Helvetica, sans-serif;
+    font-size: 22px;
+}
+.whyus p{
+    color: gray;
+}
+
+
+.story{
+    width: 90%;
+    margin: 0 0 0 60px;
+} 
+.chooseus{
+    width: 90%;
+    margin: 15px;
+    height: 800px;
+}
+
+.chooseus h2{
+    font-size: 45px;
+}
+
+
+.chooseus {
+    margin: 50px
+}
+
+.chooseus ol {
+    color: #ccc;
+    list-style-type: none;
+  }
+  
+.chooseus ol li {
+    position: relative;
+    font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+    margin-bottom: 40px;
+}
+
+.chooseus li p {
+    font: 12px/1.5 Helvetica, sans-serif;
+    padding-left: 60px;
+    color: #555;
+    font-size: 22px;
+}
+
+.chooseus span {
+    position: absolute;
+}
+
+@media only screen and (max-width: 1200px){
+    .story{
+        margin: 0 0 0 50px;
+    } 
+    .story p{
+        font-size: 20px;
+    }
+    .chooseus ol li {
+        margin-bottom: 35px;
+    }
+    .chooseus li p {
+        padding-left: 60px;
+        font-size: 20px;
+    }
+    .chooseus {
+        margin: 30px
+    }
+}
+@media only screen and (max-width: 1000px){
+    .story{
+        margin: 0 0 0 40px;
+    } 
+    .story p{
+        font-size: 15px;
+    }
+    .chooseus ol li {
+        margin-bottom: 32px;
+    }
+    .chooseus li p {
+        padding-left: 50px;
+        font-size: 18px;
+    }
+    .chooseus {
+        margin: 20px
+    }
+}
+@media only screen and (max-width: 800px){
+    .story{
+        margin: 0 0 0 35px;
+    } 
+    .story p{
+        font-size: 14px;
+    }
+    .chooseus li p {
+        padding-left: 45px;
+        font-size: 16px;
+    }
+    .chooseus {
+        margin: 15px
+    }
+    .logo a{
+        background-image: url(../IMG/logo.png);
+        background-size: 80px;
+        text-align: center;
+        top: -0.7px;
+        left: 0px;
+        display: inline-block;
+        margin: 0px;
+        background-color: rgba(255, 255, 255, 0.548);
+        background-repeat: no-repeat;
+        position: fixed;
+        z-index: 2;
+        height: 68px;
+        width: 80px;
+    }
+}

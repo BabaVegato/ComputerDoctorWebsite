@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="mainContact.css">
+    <link rel="stylesheet" href="sectionscontact.css">
+    <link rel="stylesheet" href="toggleOverlayMenuLogo.css">
+    <title>Data Recovery Doctor</title>
+</head>
+
+<body>
+
+    <header> 
+
+        <div class="logo"><a href="index.html"></a></div>
+
+        <div class="toggle"></div>
+        <div class="overlay"></div>
+        <div class = "menu">
+            <ul>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="services.html">See our services</a></li>
+                <li><a href="us.html">Meet the team</a></li>
+                <li class = "fb"><a href="https://www.facebook.com/computerdoctorfairview/"></a></li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <section class="place">
+
+        <div class="map" id="map"></div>
+
+        <div class="locationTXT">
+            <h2>Contact us</h2>
+            <h3>Business hours</h3>
+
+            <div class="business">
+                <ul class="days">
+                    <li>Monday:</li>
+                    <li>Tuesday:</li>
+                    <li>Wednesday:</li>
+                    <li>Thursday:</li>
+                    <li>Friday:</li>
+                    <li>Saturday:</li>
+                    <li>Sunday:</li>
+                    <li>Bank holiday</li>
+                </ul>
+                <ul class="hours">
+                    <li>9am to 8pm</li>
+                    <li>9am to 8pm</li>
+                    <li>9am to 8pm</li>
+                    <li>9am to 8pm</li>
+                    <li>9am to 8pm</li>
+                    <li>10am to 6pm</li>
+                    <li>Closed</li>
+                    <li>Closed</li>
+                </ul>
+            </div>
+
+            <h3>Phone number</h3>
+            <p>02231065302</p>
+
+            <h3>Email</h3>
+            <p>info@datarecoverydoctor.ie</p>
+        </div>
+
+    </section>
+
+    <section class="email">
+            <div class="container">
+                <form action="action_page.php">
+                
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Enquiry</label>
+                    <select id="country" name="country">
+                        <option value="australia">I have damaged files</option>
+                        <option value="canada">I want to protect my data</option>
+                        <option value="usa">Other</option>
+                    </select>
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="What's the problem ?" style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                
+                </form>
+            </div> 
+    </section>
+
+
+    <footer>
+
+        <div class="footertitle">
+            <p class="bold">DATA RECOVERY DOCTOR</p>
+        </div>
+
+
+        <div class="firstblock">
+            <ul class = "location">
+                <li class="bold">LOCATION</li>
+                <li>1 Fairview Corner, Fairview, Dublin D03 DT72</li>
+            </ul>
+    
+            <ul class="social">
+                <li class="bold">SOCIAL</li>
+                <li class="fb"><a href="#"></a></li>
+            </ul>
+    
+            <ul class="contact">
+                <li class="bold">CONTACT</li>
+                <li>Phone : 01 853 1116</li>
+                <li>Mobile: 087 248 3818</li>
+                <li>Email : info@datarecoverydoctor.ie</li>
+            </ul>
+        </div>
+
+        <div class="lastline"><p>© 2019 Computer Doctor.</p></div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active');
+                $('.overlay').toggleClass('active');
+                $('.menu').toggleClass('active');
+            })
+        });
+    </script>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var compDoc = {lat: 53.362711, lng: -6.236937};
+            // The map, centered at CompDoc
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 16, center: compDoc});
+            // The marker, positioned at CompDoc
+            var marker = new google.maps.Marker({position: compDoc, map: map});
+        }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhSWu5cLlc-e5vgif_It5DwsyfiaR5F2k&callback=initMap">
+    </script>
+        
+
+</body>
+
+</html>
+

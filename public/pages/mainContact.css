@@ -1,0 +1,129 @@
+body{
+    display: grid;
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style-type: none;
+}
+.theplace{
+    
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../IMG/front.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50vw;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+h1{
+    font-size:4vw;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bolder;
+}
+
+.logo a{
+    background-image: url(../IMG/logo.png);
+    background-size: 110px;
+    text-align: center;
+    top: -10px;
+    left: 0px;
+    display: inline-block;
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0.548);
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 2;
+    height: 90px;
+    width: 110px;
+
+}
+
+footer{
+    margin: -5px 0 0px 0;
+    padding : 5;
+    position: relative;
+    height: 18.5vw;
+    width: 100%;
+    height: 104%;
+    background-color: rgb(41, 41, 41);
+}
+
+footer div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    color: white;
+}
+footer ul{
+    padding: 0.2vw 0;
+    display: flex;
+    flex-direction: column;
+
+}
+footer li{
+    padding: 0.20vw 0;
+    text-align: left;
+}
+footer .bold{
+    font-size: 1.8vw;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+}
+@media only screen and (max-width: 800px){
+    .presentation{
+        left: 21vw;
+    }
+    .logo a{
+        background-image: url(../IMG/logo.png);
+        background-size: 80px;
+        text-align: center;
+        top: -0.7px;
+        left: 0px;
+        display: inline-block;
+        margin: 0px;
+        background-color: rgba(255, 255, 255, 0.548);
+        background-repeat: no-repeat;
+        position: fixed;
+        z-index: 2;
+        height: 68px;
+        width: 80px;
+    }
+    footer .bold{
+        font-size: 3vw;
+    }
+    footer li {
+        padding: 1vw 2vw;
+    }
+    footer ul{
+        padding: 0.2vw 3vw;
+    }
+}
+@media only screen and (max-width: 460px){
+    footer{
+        margin: -5px 0 -20px 0;
+        position: relative;
+        width: 100%;
+        background-color: rgb(41, 41, 41);
+    }
+    footer .footertitle{
+        height: 8%;
+    }
+    footer .firstblock{
+        height: 50%;
+    }
+    footer .bold{
+        font-size: 3vw;
+    }
+    footer li {
+        font-size: 10px;
+    }
+    footer .lastline{
+        font-size: 12px;
+        height: 1%;
+    }
+}

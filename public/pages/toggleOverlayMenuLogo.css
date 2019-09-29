@@ -1,0 +1,150 @@
+.toggle{
+    box-shadow: 3px 3px rgba(0, 0, 0, .5);
+    position : fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    z-index: 2;
+}
+.toggle:before{
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 81, 0), red);
+    font-weight: bolder;
+    transition: 2s;
+    animation: move 3s infinite;
+}
+@keyframes move {
+    from {
+        transform : scale(1);
+    }
+    50% {
+        transform : scale(1.08);
+    }
+    to {
+        transform : scale(1);
+    }
+}
+.toggle.active:before{
+    transform: rotate(405deg);
+    color: black;
+}
+.overlay{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    transition: transform 0.5s;
+    z-index: 1;
+}
+.overlay.active{
+    transform: scale(100, 100);
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+    visibility: hidden;
+}
+.menu ul{
+    position: fixed;
+    line-height: 7vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+.menu.active{
+    visibility: visible;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: red;
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.43vw;
+    background: rgba(255, 255, 0, 0.664);
+    border-radius: 5px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.menu ul li a:hover:before{
+    transform: scaleX(1);
+}
+.fb a{
+    background-image: url(../IMG/fb.png);
+    background-size: 50px;
+    text-indent: -99999999;
+    top: -15px;
+    display: inline-block;
+    margin: 10px auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+@media only screen and (max-width: 840px){
+    .menu ul li a{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .fb a{
+        background-size: 40px;
+    }
+    .menu ul{
+        line-height: 15vw;
+    }
+}
+@media only screen and (max-width: 460px){
+    
+    .fb a{
+        background-size: 20px;
+    }
+    .menu ul{
+        line-height: 10vw;
+    }
+    .menu ul li{
+        padding: 5px;
+    }
+    .menu ul li a{
+        font-size: 6vw;
+    }
+}

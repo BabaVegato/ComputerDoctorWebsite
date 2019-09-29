@@ -1,0 +1,188 @@
+.forwhom{
+    height: 25vw;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.forwhom div{
+    position: relative;
+    text-align: center;
+    margin: 0px 2px;
+    width: 50%;
+    background-color: white;
+}
+.forwhom p{
+    opacity: 0;
+    transition: 0.5s;
+}
+.forwhom .home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)),url(../IMG/home.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 3vw;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s;
+}
+.forwhom .home:hover{
+    transform: scale(1.005);
+}
+.forwhom .home:hover p{
+    opacity: 1;
+}
+.forwhom .professionals:hover p{
+    opacity: 1;
+}
+.forwhom .professionals{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../IMG/professionals.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 3vw;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s;
+}
+.forwhom .professionals:hover{
+    transform: scale(1.005);
+}
+.forwhom p{
+    background-color: rgba(0, 0, 0, 0.445);
+    text-justify: auto;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+}
+.restoredata{
+    margin: 5px 0px;
+    padding: 10px;
+    text-align: left;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../IMG/memory.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 57vw;
+}
+.restoredata h2{
+    text-align: center;
+    bottom: 10px;
+    position: relative;
+    font-size: 5vw;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.restoredata h3{
+    position: relative;
+    font-size: 3.5vw;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.restoredata p{
+    background-color: rgba(0, 0, 0, 0.445);
+    text-justify: auto;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+}
+
+.problems{
+    padding: 5vw;
+    height: 40vw;
+    margin: -5vw 0 2vw 0;
+    display: flex;
+    flex-direction: row;
+}
+.problems h2{
+    font-size: 4vw;
+}
+.problems div{
+    background-position-x: 50%;
+    position: relative;
+    text-align: left;
+    margin: 5px 5px;
+    width: 50%;
+    background-color: white;
+}
+.problems p{
+    font-size: 1.5vw;
+    color: grey;
+    text-align: left;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.problems .backupIMG:hover{
+    transform: scale(1.005);
+}
+.problems .backupIMG{
+    background-image: url(../IMG/backup.png);
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: transform 0.2s;
+}
+.problems .backupTXT:hover{
+    transform: scale(1.005);
+}
+@media only screen and (max-width: 800px){
+    .problems{
+        margin: -5vw 0 30vw 0;
+    }
+    .problems h2{
+        font-size: 4vw;
+    }
+    .problems p{
+        font-size: 2.2vw;
+    }
+    .problems .backupIMG{
+        background-position-y: 5vw;
+        background-size: 85%;
+    }
+    .restoredata h3{
+        font-size: 5vw;
+    }
+    .restoredata p{
+        font-size: 4vw;
+    }
+    .restoredata{
+        height: 90vw;
+    }
+}
+@media only screen and (max-width: 520px){
+    .problems{
+        margin: -5vw 0 35vw 0;
+    }
+}
+@media only screen and (max-width: 460px){
+    .forwhom{
+        height: 32vw;
+    }
+    .forwhom p{
+        font-size: 3.2vw;
+    }
+    .problems{
+        margin: -5vw 0 40vw 0;
+    }
+    .problems div{
+        width: 100%;
+    }
+    .problems h2{
+        font-size: 6vw;
+    }
+    .problems p{
+        font-size: 3.2vw;
+    }
+    .problems .backupIMG{
+        width: 0;
+        background-position-y: 5vw;
+        background-size: 100%;
+    }
+    .restoredata{
+        height: 90vw;
+    }
+}
